@@ -76,10 +76,3 @@ movieDisplay.addEventListener("click", function (e) {
     localStorage.setItem("films", JSON.stringify(selectedFilms));
   }
 });
-
-// function reason() {
-//   var dropd = document.getElementById("savedrop").value;
-//   var drophistory = JSON.parse(localStorage.getItem("reason")) || [];
-//   drophistory.push(dropd);
-//   localStorage.setItem("reason", JSON.stringify(drophistory));
-// }
