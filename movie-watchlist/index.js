@@ -3,28 +3,29 @@ const searchBtn = document.getElementById("search-btn");
 let searchTerm = "";
 const movieDisplay = document.getElementById("movie-display");
 let filmArr = [];
-// let selectedFilms = [];
-
-searchBar.addEventListener("change", function () {
+const defaultDisplay = document.getElementById("default-display");
+searchBar?.addEventListener("change", function () {
   searchTerm = searchBar.value;
   return searchTerm;
 });
 
-console.log(searchBar);
-
-searchBtn.addEventListener("click", function (e) {
+searchBtn?.addEventListener("click", function (e) {
   e.preventDefault();
 
   fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=3e11483`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      if (data.Response === "False") {
+        defaultDisplay.innerHTML = `<h3 class="error-message">Sorry! No movies matched your search. Please try again</h3>`;
+      }
+
       data.Search.forEach((film) => {
         const imdbID = film.imdbID;
         fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=3e11483`)
           .then((res) => res.json())
           .then((data) => {
             filmArr.push(data);
+
             renderFilm(filmArr);
           });
       });
@@ -32,7 +33,7 @@ searchBtn.addEventListener("click", function (e) {
   filmArr = [];
 });
 
-function renderFilm(arr) {
+export function renderFilm(arr) {
   let html = "";
   arr.forEach((film) => {
     html += `

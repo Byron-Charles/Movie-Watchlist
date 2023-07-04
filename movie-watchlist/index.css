@@ -11,7 +11,6 @@ body {
 .wrapper {
   height: auto;
   padding: 20px;
-  border: 2px red solid;
   overflow: scroll;
   background: #121212;
 }
