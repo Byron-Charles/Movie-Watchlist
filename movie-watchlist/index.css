@@ -1,0 +1,118 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 700px;
+  font-family: sans-serif;
+}
+
+#header {
+  background: linear-gradient(1800deg, black, gray);
+  color: white;
+  height: 200px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  position: relative;
+}
+
+form {
+  position: absolute;
+  top: 175px;
+  left: 65px;
+  display: flex;
+}
+
+input {
+  padding: 10px;
+  width: 400px;
+  border-radius: 0;
+  border: none;
+  border: 2px lightgray solid;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+button {
+  width: 150px;
+  border-radius: 0;
+  border: none;
+  border-top-right-radius: 5px;
+  border: 2px lightgray solid;
+}
+
+#movie-display {
+  width: 100%;
+
+  height: 500px;
+}
+
+#default-display {
+  color: lightgray;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#default-display > i {
+  font-size: 3rem;
+}
+
+#film-info {
+  display: flex;
+  gap: 20px;
+}
+
+#film-info * {
+  margin: 5px;
+}
+
+#film-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#film-first-line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#film-second-line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#watchlist-p {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* #film-info {
+  display: grid;
+  grid-template-areas: "a b c";
+}
+
+#poster {
+  grid-area: "a";
+}
+
+#title {
+  grid-area: "b";
+}
+
+#rating {
+  grid-area: "c";
+} */
