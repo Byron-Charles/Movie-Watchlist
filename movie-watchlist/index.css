@@ -126,3 +126,12 @@ hr {
   width: 150px;
   object-fit: cover;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #6b7280;
+}
